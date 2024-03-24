@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 10:32:24 by chruhin           #+#    #+#             */
-/*   Updated: 2024/03/13 21:40:33 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/03/22 16:42:53 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -272,6 +272,7 @@ void	helper_select(Contact students[8], int &count, int &id)
 	std::cin.ignore(10000, '\n');
 }
 
+// check if the string contains only digits 0 to 9 and space
 int	is_digit(std::string str)
 {
 	int	i = 0;
@@ -286,6 +287,7 @@ int	is_digit(std::string str)
 	return (1);
 }
 
+// check if the string contains only alphabetical characters, space and tabs
 int	is_alpha(std::string str)
 {
 	int	i = 0;
@@ -301,9 +303,37 @@ int	is_alpha(std::string str)
 	return (1);
 }
 
+// trim the string data to 10 characters and a dot (.) at the end
 std::string	trim(std::string data)
 {
 	if (data.length() >= 10)
 		data = data.substr(0, 9).append(".");
 	return (data);
+}
+
+// Add a new student to the phonebook
+void	PhoneBook::addStudent(const Contact &new_student)
+{
+	if (numStudents > 7)
+		numStudents = 0;
+	if (numStudents < 8)
+	{
+		if (numStudents == 7)
+			std::cout << RED << FULL << std::endl << RST;
+		students[numStudents++] = new_student;
+	}
+}
+
+// Check if a student already exists in the phonebook
+bool	PhoneBook::studentExists(const Contact &student) const
+{
+	for (int i = 0; i < numStudents; i++)
+	{
+		if (students[i].get_first_name() == student.get_first_name() && \
+			students[i].get_last_name() == student.get_last_name())
+		{
+			return true;
+		}
+	}
+	return false;
 }
