@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 12:42:14 by chruhin           #+#    #+#             */
-/*   Updated: 2024/03/14 17:38:32 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/03/24 17:49:34 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	Account::_nbAccounts = 0;
 int	Account::_totalAmount = 0;
 int	Account::_totalNbDeposits = 0;
 int	Account::_totalNbWithdrawals = 0;
+
 
 int	Account::checkAmount( void ) const
 {
@@ -69,7 +70,9 @@ static void	displayTimestamp(void)
 		<< "] ";
 }
 
-// to display the current status of an account
+/*
+
+*/
 void	Account::displayStatus(void) const
 {
 	displayTimestamp();
@@ -79,11 +82,13 @@ void	Account::displayStatus(void) const
 	<< "withdrawals:" << _nbWithdrawals << std::endl;
 }
 
-// to add money to an account
+/*
+[19920104_091532] index:0;p_amount:42;deposit:5;amount:47;nb_deposits:1
+*/
 void Account::makeDeposit(int deposit)
 {
 	displayTimestamp();
-	std::cout << "index" << _accountIndex << ";"
+	std::cout << "index:" << _accountIndex << ";"
 		<< "p_amount:" << _amount << ";"
 		<< "deposit:" << deposit << ";";
 		_amount += deposit;
@@ -104,7 +109,6 @@ void	Account::displayAccountsInfos( void )
 		<< std::endl;
 }
 
-// to withdraw money from an account
 bool	Account::makeWithdrawal( int withdrawal )
 {
 	displayTimestamp();
@@ -126,10 +130,6 @@ bool	Account::makeWithdrawal( int withdrawal )
 	return (true);
 }
 
-/*
-Constructor: to initialize an account with an initial deposit
-The constructor initializes an account with a specified initial deposit
-*/
 Account::Account( int initial_deposit ) : _amount(initial_deposit)
 {
 	displayTimestamp();
@@ -143,11 +143,6 @@ Account::Account( int initial_deposit ) : _amount(initial_deposit)
 	_nbAccounts++;
 }
 
-/*
-Destructor: to clean up resources when an account is destroyed
-The destructor is responsible for cleaning up resources when
-an account is destroyed
-*/
 Account::~Account( void )
 {
 	displayTimestamp();
