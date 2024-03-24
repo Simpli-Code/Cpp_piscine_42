@@ -6,10 +6,11 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 21:55:39 by chruhin           #+#    #+#             */
-/*   Updated: 2024/03/14 17:52:09 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/03/22 16:37:21 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
@@ -63,32 +64,8 @@ public:
 	Contact	students[8];
 	int numStudents;
 
-	// Add a new student to the phonebook
-	void addStudent(const Contact &new_student)
-	{
-		if (numStudents > 7)
-			numStudents = 0;
-		if (numStudents < 8)
-		{
-			if (numStudents == 7)
-				std::cout << RED << FULL << std::endl << RST;
-			students[numStudents++] = new_student;
-		}
-	}
-
-	// Check if a student already exists in the phonebook
-	bool studentExists(const Contact &student) const
-	{
-		for (int i = 0; i < numStudents; i++)
-		{
-			if (students[i].get_first_name() == student.get_first_name() && \
-				students[i].get_last_name() == student.get_last_name())
-			{
-				return true;
-			}
-		}
-		return false;
-	}
+	bool	studentExists(const Contact &student) const;
+	void	addStudent(const Contact &new_student);
 };
 
 std::string	welcome_page(std::string);

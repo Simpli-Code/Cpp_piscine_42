@@ -6,10 +6,11 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 11:55:49 by chruhin           #+#    #+#             */
-/*   Updated: 2024/03/14 17:48:40 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/03/21 20:15:17 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
