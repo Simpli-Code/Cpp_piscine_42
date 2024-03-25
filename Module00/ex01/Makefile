@@ -6,32 +6,29 @@
 #    By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/29 20:50:53 by chruhin           #+#    #+#              #
-#    Updated: 2024/03/14 12:47:30 by chruhin          ###   ########.fr        #
+#    Updated: 2024/03/24 11:42:02 by chruhin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=			phonebook
 
 OBJ_DIR			=			Obj
-SRC_DIR			=			src
-INC_DIR			=			inc
+SRCS			=			PhoneBook.cpp Contact.cpp main.cpp
+OBJS			=			$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
+DEPS			=			$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.d))
 
-SRCS			=			$(wildcard $(SRC_DIR)/*.cpp)
-OBJS			=			$(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(SRCS))
-INCS			=			-I $(INC_DIR)
-
-FLAGS			=			-Wall -Wextra -std=c++98 -Werror
-CC				=			clang++
+CC				=			c++
+FLAGS			=			-Wall -Wextra -std=c++98 -MMD -Werror
 RM				=			rm -rf
 
-.PHONY:						clean fclean re all
+.PHONY:						all clean fclean re
 all:						$(OBJ_DIR) $(NAME)
 
 $(OBJ_DIR):
 							@mkdir -p $(OBJ_DIR)
 
-$(OBJ_DIR)/%.o:				$(SRC_DIR)/%.cpp
-							@$(CC) $(FLAGS) $(INCS) -c $< -o $@
+$(OBJ_DIR)/%.o:				%.cpp
+							@$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME):					$(OBJS)
 							@$(CC) $(FLAGS) $(OBJS) -o $(NAME)
@@ -47,7 +44,8 @@ fclean:						clean
 
 re:							fclean all
 
+-include $(DEPS)
+
 RED				=			\e[1;31m
 GRN				=			\e[1;32m
-YEL				=			\e[1;33m
 RST				=			\e[0m
