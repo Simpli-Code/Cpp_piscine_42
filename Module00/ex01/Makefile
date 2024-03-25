@@ -6,16 +6,20 @@
 #    By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/29 20:50:53 by chruhin           #+#    #+#              #
-#    Updated: 2024/03/24 11:42:02 by chruhin          ###   ########.fr        #
+#    Updated: 2024/03/25 19:32:21 by chruhin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=			phonebook
 
+INC_DIR			=			inc
 OBJ_DIR			=			Obj
-SRCS			=			PhoneBook.cpp Contact.cpp main.cpp
-OBJS			=			$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
-DEPS			=			$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.d))
+SRC_DIR			=			src
+
+SRCS			=			$(wildcard $(SRC_DIR)/*.cpp)
+INCS			=			$(addprefix -I, $(INC_DIR))
+OBJS			=			$(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(SRCS))
+DEPS			=			$(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.d, $(SRCS))
 
 CC				=			c++
 FLAGS			=			-Wall -Wextra -std=c++98 -MMD -Werror
@@ -27,8 +31,8 @@ all:						$(OBJ_DIR) $(NAME)
 $(OBJ_DIR):
 							@mkdir -p $(OBJ_DIR)
 
-$(OBJ_DIR)/%.o:				%.cpp
-							@$(CC) $(FLAGS) -c $< -o $@
+$(OBJ_DIR)/%.o:				$(SRC_DIR)/%.cpp
+							@$(CC) $(FLAGS) $(INCS) -c $< -o $@
 
 $(NAME):					$(OBJS)
 							@$(CC) $(FLAGS) $(OBJS) -o $(NAME)
