@@ -6,16 +6,20 @@
 #    By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/14 10:29:44 by chruhin           #+#    #+#              #
-#    Updated: 2024/03/24 11:44:28 by chruhin          ###   ########.fr        #
+#    Updated: 2024/03/25 20:56:38 by chruhin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=			account
 
+INC_DIR			=			inc
 OBJ_DIR			=			obj
-SRCS			=			Account.cpp tests.cpp
-OBJS			=			$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
-DEPS			=			$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.d))
+SRC_DIR			=			src
+
+SRCS			=			$(wildcard $(SRC_DIR)/*.cpp)
+INCS			=			$(addprefix -I, $(INC_DIR))
+OBJS			=			$(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(SRCS))
+DEPS			=			$(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.d, $(SRCS))
 
 CC				=			c++
 FLAGS			=			-Wall -Wextra -std=c++98 -MMD -Werror
@@ -27,8 +31,8 @@ all:						$(OBJ_DIR) $(NAME)
 $(OBJ_DIR):
 							@mkdir -p $(OBJ_DIR)
 
-$(OBJ_DIR)/%.o:				%.cpp
-							@$(CC) $(FLAGS) -c $< -o $@
+$(OBJ_DIR)/%.o:				$(SRC_DIR)/%.cpp
+							@$(CC) $(FLAGS) $(INCS) -c $< -o $@
 
 $(NAME):					$(OBJS)
 							@$(CC) $(FLAGS) $(OBJS) -o $(NAME)
