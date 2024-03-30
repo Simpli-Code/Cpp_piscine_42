@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 11:25:09 by chruhin           #+#    #+#             */
-/*   Updated: 2024/03/30 18:01:46 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/03/30 21:06:54 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,24 @@
 # define CYN	"\e[1;36m"
 # define RST	"\e[0m"
 
-# define ARG " and a string. a string can be \n<DEBUG>, <INFO>, <WARNING>, <ERROR>\n or any string\n"
+enum complain
+{
+	DEBUG,
+	INFO,
+	WARNING,
+	ERROR,
+	INVALID
+};
+
+# define ARG " and a string. a string can be \n" \
+"<DEBUG>, <INFO>, <WARNING>, <ERROR>\n" \
+"or <I am not sure how tired I am today...>\n"
 
 class Harl
 {
+private:
 public:
-	static void complain(const std::string &level);
+	void	complain(int level);
 };
 
 #endif
