@@ -6,16 +6,16 @@
 #    By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/21 19:42:52 by chruhin           #+#    #+#              #
-#    Updated: 2024/03/25 16:32:31 by chruhin          ###   ########.fr        #
+#    Updated: 2024/03/30 09:26:02 by chruhin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=			zombie
 
 OBJ_DIR			=			Obj
-SRCS			=			Zombie.cpp main.cpp
-OBJS			=			$(addprefix $(OBJ_DIR)/, $(SRCS.cpp=.o))
-DEPS			=			$(addprefix $(OBJ_DIR)/, $(SRCS.cpp=.d))
+SRCS				=		Zombie.cpp main.cpp
+OBJS			=			$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
+DEPS			=			$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.d))
 
 CC				=			c++
 FLAGS			=			-Wall -Wextra -std=c++98 -MMD -Werror
