@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 18:43:01 by chruhin           #+#    #+#             */
-/*   Updated: 2024/03/25 14:29:34 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/01 15:59:35 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Whenever this function is called it prints the value of _name the string
 */
 void	Zombie::announce(void)
 {
-	std::cout << _name << BRAIN << std::endl;
+	std::cout << GRN << _name << RST << PIN << BRAIN << RST << std::endl;
 }
 
 /*
@@ -55,7 +55,7 @@ Zombie	*Zombie::zombieHorde(int N, std::string name)
 This function calls zombieHorde and checks if allocations failed
 if so it prints an error msg malloc failure
 else it enters a loop and calls announce function for each object
-and at the it frees the array of zombies to avoid memory leaks
+and at the end it frees the array of zombies to avoid memory leaks
 */
 void testZombieHorde(int N, std::string name)
 {
@@ -78,5 +78,5 @@ void testZombieHorde(int N, std::string name)
 //The destructor will clean up everything at the end
 Zombie::~Zombie(void)
 {
-	std::cout << _name << DESTR << std::endl;
+	std::cout << RED << _name << RST << YEL << DESTR << RST << std::endl;
 }

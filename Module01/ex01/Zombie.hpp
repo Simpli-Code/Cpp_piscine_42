@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 18:41:14 by chruhin           #+#    #+#             */
-/*   Updated: 2024/03/25 14:30:42 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/01 15:59:53 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@
 # define MLC_FAIL	"Failed to allocate memory for the zombie horde"
 # define USAGE		"Usage: Enter a Number and a Name!"
 # define INVD		"Invalid input! First argument must a positive integer number"
-# define DESTR		":\e[1;35m Destroyed\e[0m"
-# define BRAIN		":\e[1;36m BraiiiiiiinnnzzzZ...\e[0m"
+# define DESTR		" : Destroyed"
+# define BRAIN		" : BraiiiiiiinnnzzzZ..."
 
 class Zombie
 {
