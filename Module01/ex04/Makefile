@@ -6,7 +6,7 @@
 #    By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/21 19:42:52 by chruhin           #+#    #+#              #
-#    Updated: 2024/03/30 12:51:47 by chruhin          ###   ########.fr        #
+#    Updated: 2024/03/30 21:21:52 by chruhin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME			=			my_sed
 
 OBJ_DIR			=			Obj
 
-SRCS			=			My_Sed.cpp main.cpp
+SRCS			=			my_sed.cpp main.cpp
 OBJS			=			$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 DEPS			=			$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.d))
 
