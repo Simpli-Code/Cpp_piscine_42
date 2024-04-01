@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 20:18:23 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/01 16:02:04 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/01 16:28:43 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,14 @@ Zombie	*newZombie(std::string name)
 	return new Zombie(name);
 }
 
+
 // Allocates statically memory for an object and call the function announce
 void	randomChump(std::string name)
 {
 	Zombie zombie(name);
 	zombie.announce();
 }
+
 
 // The destructor will clean up everything at the end
 Zombie::~Zombie()
