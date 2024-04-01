@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 16:26:49 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/01 12:43:15 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/01 17:55:03 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ HumanA::HumanA()
 	_weapon->setType("Default Weapon");
 }
 
-HumanA::HumanA(std::string name)
+HumanA::HumanA(std::string &name)
 {
 	_name = name;
 	_weapon->setType("Default Weapon");
@@ -32,8 +32,7 @@ HumanA::HumanA(std::string name, Weapon &weapon)
 
 void HumanA::attack()
 {
-	if (_weapon != NULL)
-		std::cout << YEL << _name << AWH << RST << GRN << _weapon->getType() << RST << std::endl;
+	std::cout << YEL << _name << AWH << RST << RED << _weapon->getType() << RST << std::endl;
 }
 
 HumanA::~HumanA()

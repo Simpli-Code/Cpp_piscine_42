@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 17:01:29 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/01 12:44:25 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/01 17:10:50 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,12 @@ void HumanB::attack()
 {
 	if (_weapon != NULL)
 	{
-		std::cout << PIN << _name << AWH << RST << RED << _weapon->getType() << RST << std::endl;
+		std::cout << GRN << _name << AWH << RST << RED << _weapon->getType() << RST << std::endl;
+		return ;
+	}
+	else
+	{
+		std::cout << PIN << _name << AWH << UA << RST << std::endl;
 		return ;
 	}
 }

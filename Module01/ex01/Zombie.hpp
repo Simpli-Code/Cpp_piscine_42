@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 18:41:14 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/01 15:59:53 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/01 18:04:25 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 # define RST		"\e[0m"
 
 # define MLC_FAIL	"Failed to allocate memory for the zombie horde"
-# define USAGE		"Usage: Enter a Number and a Name!"
+# define USAGE		"Usage: Enter the Number of Zombies to be created and a Name!"
 # define INVD		"Invalid input! First argument must a positive integer number"
 # define DESTR		" : Destroyed"
 # define BRAIN		" : BraiiiiiiinnnzzzZ..."
@@ -39,13 +39,10 @@ private:
 	std::string _name;
 
 public:
-
 	Zombie();
-
 	explicit	Zombie(std::string name);
 	static Zombie	*zombieHorde(int N, std::string name);
 	void	announce();
-
 	~Zombie();
 };
 

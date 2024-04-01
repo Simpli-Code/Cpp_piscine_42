@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 18:41:05 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/01 12:48:25 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/01 17:43:11 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,19 +45,19 @@ int main(void)
 	{
 		Weapon club = Weapon(CSC);
 
-		HumanA bob("Bob", club);
-		bob.attack();
+		HumanA Bob("Bob", club);
+		Bob.attack();
 		club.setType(SOTOC);
-		bob.attack();
+		Bob.attack();
 	}
 	{
 		Weapon club = Weapon(CSC);
 
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
+		HumanB	Jim("Jim");
+		Jim.setWeapon(club);
+		Jim.attack();
 		club.setType(SOTOC);
-		jim.attack();
+		Jim.attack();
 	}
 	return (0);
 }

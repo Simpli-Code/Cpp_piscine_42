@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 18:43:01 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/01 15:59:35 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/01 18:06:12 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,5 @@ void testZombieHorde(int N, std::string name)
 //The destructor will clean up everything at the end
 Zombie::~Zombie(void)
 {
-	std::cout << RED << _name << RST << YEL << DESTR << RST << std::endl;
+	std::cout << RED << _name << RST << CYN << DESTR << RST << std::endl;
 }

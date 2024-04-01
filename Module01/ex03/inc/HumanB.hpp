@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 16:29:37 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/01 12:37:08 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/01 16:13:14 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@
 
 class HumanB
 {
+	private:
+		std::string _name;
+		Weapon	*_weapon;
+		
 	public:
 		HumanB();
 		HumanB(const HumanB &copy);
@@ -27,10 +31,6 @@ class HumanB
 		void setWeapon(Weapon &weapon);
 		~HumanB();
 		std::string getName() const;
-
-	private:
-		std::string _name;
-		Weapon	*_weapon;
 };
 
 #endif
