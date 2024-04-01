@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 20:25:16 by chruhin           #+#    #+#             */
-/*   Updated: 2024/03/25 14:41:45 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/01 15:50:11 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,6 @@ and don't need it to persist beyond that function's scope
 */
 int	main(void)
 {
-	Zombie zombie("Stack");
-	zombie.announce();
-
 	Zombie	*zombiePtr = newZombie("Heap");
 	if (zombiePtr == NULL)
 	{
