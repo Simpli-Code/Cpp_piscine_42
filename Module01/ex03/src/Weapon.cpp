@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/25 16:28:57 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/01 12:52:16 by chruhin          ###   ########.fr       */
+/*   Created: 2024/03/25 16:54:21 by chruhin           #+#    #+#             */
+/*   Updated: 2024/03/26 18:24:44 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#include "Weapon.hpp"
 
-# include "Weapon.hpp"
-# include <string>
+Weapon::Weapon(const std::string type) : _type(type) {}
 
-class HumanA
+const std::string Weapon::getType() const
 {
-	public:
-		HumanA();
-		HumanA(std::string name);
-		HumanA(std::string name, Weapon &weapon);
-		void attack();
-		~HumanA();
-		std::string getName() const;
+	return (_type);
+}
 
-	private:
-		std::string _name;
-		Weapon	*_weapon;
-};
-
-#endif
+void Weapon::setType(const std::string	newType)
+{
+	_type = newType;
+}

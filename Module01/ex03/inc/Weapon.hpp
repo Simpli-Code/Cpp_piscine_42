@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/26 08:43:32 by codespace         #+#    #+#             */
-/*   Updated: 2024/03/26 08:48:33 by codespace        ###   ########.fr       */
+/*   Created: 2024/03/25 16:27:38 by chruhin           #+#    #+#             */
+/*   Updated: 2024/03/26 17:00:47 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,22 +25,19 @@
 # define RST	"\e[0m"
 
 # define AWH	" attacks with his "
-# define AU		" attacks unarmed"
+# define AU		" fists"
 # define CSC	"crude spiked club"
-# define SOTOC	"some other type of club"
+# define SOTOC	"AK-47"
 
 class Weapon
 {
 private:
 	std::string _type;
-
 public:
+	explicit	Weapon(const std::string type);
 
-	Weapon(const std::string &type);
-
-	const std::string &getType() const;
-	void setType(const std::string &newType);
-
+	const std::string getType() const;
+	void setType(const std::string newType);
 };
 
 #endif

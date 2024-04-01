@@ -3,35 +3,52 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/26 08:44:49 by codespace         #+#    #+#             */
-/*   Updated: 2024/03/26 08:48:50 by codespace        ###   ########.fr       */
+/*   Created: 2024/03/25 17:01:29 by chruhin           #+#    #+#             */
+/*   Updated: 2024/04/01 12:44:25 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(const std::string &name) : _name(name), _weaponPtr(NULL) {}
-
-void HumanB::setWeapon(const Weapon &weapon)
+HumanB::HumanB()
 {
-	_weaponPtr = new Weapon(weapon.getType());
+	_name = "";
+	_weapon = NULL;
 }
 
-void HumanB::attack() const
+HumanB::HumanB(const HumanB &copy)
 {
-	if (_weaponPtr != NULL)
+	_name = copy.getName();
+	_weapon = copy._weapon;
+}
+
+HumanB::HumanB(std::string name)
+{
+	_name = name;
+	_weapon = NULL;
+}
+
+void HumanB::attack()
+{
+	if (_weapon != NULL)
 	{
-		std::cout << BLU << _name << AWH << _weaponPtr->getType() << RST << std::endl;
+		std::cout << PIN << _name << AWH << RST << RED << _weapon->getType() << RST << std::endl;
+		return ;
 	}
-	else
-	{
-		std::cout << YEL << _name << AU << RST << std::endl;
-	}
+}
+
+void HumanB::setWeapon(Weapon &weapon)
+{
+	_weapon = &weapon;
 }
 
 HumanB::~HumanB()
 {
-	delete (_weaponPtr);
+}
+
+std::string HumanB::getName() const
+{
+	return (_name);
 }

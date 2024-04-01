@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/26 08:43:16 by codespace         #+#    #+#             */
-/*   Updated: 2024/03/26 08:43:17 by codespace        ###   ########.fr       */
+/*   Created: 2024/03/25 16:29:37 by chruhin           #+#    #+#             */
+/*   Updated: 2024/04/01 12:37:08 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,18 @@
 
 class HumanB
 {
-private:
-	std::string _name;
-	Weapon *_weaponPtr;
+	public:
+		HumanB();
+		HumanB(const HumanB &copy);
+		HumanB(std::string name);
+		void attack();
+		void setWeapon(Weapon &weapon);
+		~HumanB();
+		std::string getName() const;
 
-public:
-
-	HumanB(const std::string &name);
-
-	void setWeapon(const Weapon &weapon);
-	void attack() const;
-
-	~HumanB();
+	private:
+		std::string _name;
+		Weapon	*_weapon;
 };
 
 #endif
