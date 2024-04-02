@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 16:26:49 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/02 17:33:04 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/02 15:49:55 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ HumanA::HumanA(std::string name)
 {
 	_name = name;
 	_weapon = NULL;
-	std::cerr << RED << "HumanA must have a Name and a Weapon!" << RST << std::endl;
+	std::cerr << RED << "HumanA must have a Weapon!" << RST << std::endl;
 	
 }
 
