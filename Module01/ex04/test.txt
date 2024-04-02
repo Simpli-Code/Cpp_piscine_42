@@ -1,7 +1,7 @@
 hi
-bye
-hi
+bi
 hello
-hi
+bye
+good
 mello
-hi
+bad

@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 16:09:41 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/01 12:08:50 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/02 11:03:18 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,7 @@ std::string My_Sed::replaceString(const std::string &str) const
 		start = end + _s1.length();
 	}
 	newStr += str.substr(start);
-	if (newStr.find(_s1, start) != std::string::npos)
-	{
-		newStr += replaceString(newStr);
-	}
-
-	return newStr;
+	return (newStr);
 }
 
 void My_Sed::replaceInFile()
