@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 16:27:38 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/01 17:21:49 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/02 11:12:00 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ private:
 	std::string _type;
 
 public:
-	explicit	Weapon(const std::string &type);
+	Weapon(const std::string &type);
 	const std::string &getType() const;
 	void setType(const std::string &newType);
 };

@@ -6,15 +6,15 @@
 #    By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/21 19:42:52 by chruhin           #+#    #+#              #
-#    Updated: 2024/03/30 21:21:52 by chruhin          ###   ########.fr        #
+#    Updated: 2024/04/02 11:07:50 by chruhin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=			my_sed
+NAME			=			ft_sed
 
 OBJ_DIR			=			Obj
 
-SRCS			=			my_sed.cpp main.cpp
+SRCS			=			ft_sed.cpp main.cpp
 OBJS			=			$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 DEPS			=			$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.d))
 

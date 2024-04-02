@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 17:01:29 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/01 17:10:50 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/02 17:35:02 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 HumanB::HumanB()
 {
-	_name = "";
+	_name = "Unknown";
 	_weapon = NULL;
+	std::cout << RED << "No Name provided for HumanB!" << RST << std::endl;
 }
 
 HumanB::HumanB(const HumanB &copy)

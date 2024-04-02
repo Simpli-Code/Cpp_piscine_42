@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 18:41:05 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/01 17:43:11 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/02 17:27:25 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,12 @@ int main(void)
 		Bob.attack();
 		club.setType(SOTOC);
 		Bob.attack();
+
+		HumanA Jack("Jack");
+		Jack.attack();
+
+		HumanA Jon;
+		Jon.attack();
 	}
 	{
 		Weapon club = Weapon(CSC);
@@ -58,6 +64,12 @@ int main(void)
 		Jim.attack();
 		club.setType(SOTOC);
 		Jim.attack();
+
+		HumanB Ali("Ali");
+		Ali.attack();
+
+		HumanB Jon;
+		Jon.attack();
 	}
 	return (0);
 }

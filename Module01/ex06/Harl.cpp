@@ -6,15 +6,15 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 11:26:49 by chruhin           #+#    #+#             */
-/*   Updated: 2024/03/30 21:02:39 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/02 11:34:10 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-void Harl::complain(int level)
+void Harl::complain(int num)
 {
-	switch (level)
+	switch (num)
 	{
 		case DEBUG:
 		{
