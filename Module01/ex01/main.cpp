@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 18:41:05 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/02 11:28:07 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/02 20:34:29 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ int main(int argc, char *argv[])
 		testZombieHorde(N, str);
 	}
 	else
-		std::cerr << YEL << "Usage: Enter 3 Arguments \n" << RST << GRN << argv[0] << RST << YEL << USAGE << RST;
+		std::cerr << YEL << "Usage: Enter 3 Arguments \n" << RST << PIN << argv[0] << RST << YEL << USAGE << RST;
 	return 0;
 }

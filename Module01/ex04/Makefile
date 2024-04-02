@@ -6,15 +6,15 @@
 #    By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/21 19:42:52 by chruhin           #+#    #+#              #
-#    Updated: 2024/04/02 11:07:50 by chruhin          ###   ########.fr        #
+#    Updated: 2024/04/02 20:39:45 by chruhin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=			ft_sed
+NAME			=			ftsed
 
 OBJ_DIR			=			Obj
 
-SRCS			=			ft_sed.cpp main.cpp
+SRCS			=			ftsed.cpp main.cpp
 OBJS			=			$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 DEPS			=			$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.d))
 
@@ -33,7 +33,7 @@ $(OBJ_DIR)/%.o:				%.cpp
 
 $(NAME):					$(OBJS)
 							@$(CC) $(FLAGS) $(OBJS) -o $(NAME)
-							@printf "${GRN}Compiled successfuly ${RST}\n"
+							@printf "${GRN}Compiled successfuly $(RST) $(PIN)./$(NAME) ${RST}\n"
 
 clean:
 							@$(RM) $(OBJ_DIR)
@@ -49,4 +49,5 @@ re:							fclean all
 
 RED				=			\e[1;31m
 GRN				=			\e[1;32m
+PIN				=			\e[1;35m
 RST				=			\e[0m

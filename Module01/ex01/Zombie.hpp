@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 18:41:14 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/02 11:28:58 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/02 20:35:11 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 # define RST		"\e[0m"
 
 # define MLC_FAIL	"Failed to allocate memory for the zombie horde"
-# define USAGE		"  Number of Zombies  \e[1;32m10\e[0m  \e[1;33mand a Name for zombies\e[0m \e[1;32mfoo\e[0m\n"
+# define USAGE		"  Number of Zombies  \e[1;35m10\e[0m  \e[1;33mand a Name for zombies\e[0m \e[1;35mfoo\e[0m\n"
 # define INVD		"Invalid input! First argument must be a positive integer number\n"
 # define DESTR		" : Destroyed"
 # define BRAIN		" : BraiiiiiiinnnzzzZ..."

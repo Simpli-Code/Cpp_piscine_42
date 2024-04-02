@@ -6,11 +6,11 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 16:06:05 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/02 11:08:28 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/02 20:39:07 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_sed.hpp"
+#include "ftsed.hpp"
 
 int	main(int argc, char *argv[])
 {
@@ -19,10 +19,10 @@ int	main(int argc, char *argv[])
 		std::string filename = argv[1];
 		std::string s1 = argv[2];
 		std::string s2 = argv[3];
-		Ft_Sed ft_sed(filename, s1, s2);
-		if (!ft_sed.check_input())
+		FtSed ftsed(filename, s1, s2);
+		if (!ftsed.check_input())
 			return (1);
-		ft_sed.replaceInFile();
+		ftsed.replaceInFile();
 	}
 	else
 	{
@@ -32,7 +32,7 @@ int	main(int argc, char *argv[])
 	return (0);
 }
 
-bool	Ft_Sed::check_input()
+bool	FtSed::check_input()
 {
 	if (_s1.empty() || _s1 == "")
 	{

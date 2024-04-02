@@ -6,7 +6,7 @@
 #    By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/21 19:42:52 by chruhin           #+#    #+#              #
-#    Updated: 2024/03/25 16:34:45 by chruhin          ###   ########.fr        #
+#    Updated: 2024/04/02 20:32:48 by chruhin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ $(OBJ_DIR)/%.o:				%.cpp
 
 $(NAME):					$(OBJS)
 							@$(CC) $(FLAGS) $(OBJS) -o $(NAME)
-							@printf "${GRN}Compiled successfuly ${RST}\n"
+							@printf "${GRN}Compiled successfuly $(RST) $(PIN)./$(NAME) ${RST}\n"
 
 clean:
 							@$(RM) $(OBJ_DIR)
@@ -45,4 +45,5 @@ re:							fclean all
 
 RED				=			\e[1;31m
 GRN				=			\e[1;32m
+PIN				=			\e[1;35m
 RST				=			\e[0m
