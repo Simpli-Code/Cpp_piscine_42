@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 17:01:29 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/02 17:35:02 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/02 19:26:00 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 HumanB::HumanB()
 {
-	_name = "Unknown";
+	_name = "No Name";
 	_weapon = NULL;
 	std::cout << RED << "No Name provided for HumanB!" << RST << std::endl;
 }
@@ -35,12 +35,12 @@ void HumanB::attack()
 {
 	if (_weapon != NULL)
 	{
-		std::cout << GRN << _name << AWH << RST << RED << _weapon->getType() << RST << std::endl;
+		std::cout << GRN << _name << AWH << _weapon->getType() << RST << std::endl;
 		return ;
 	}
 	else
 	{
-		std::cout << PIN << _name << AWH << UA << RST << std::endl;
+		std::cout << BLU << _name << AWH << UA << RST << std::endl;
 		return ;
 	}
 }
