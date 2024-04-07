@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 18:43:01 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/01 18:06:12 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/06 17:18:59 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,15 @@ Returns a pointer to the first zombie
 Zombie	*Zombie::zombieHorde(int N, std::string name)
 {
 	Zombie	*horde = new Zombie[N];
-	if (horde == NULL)
+	if (!horde)
 	{
-		std::cerr << RED << MLC_FAIL << RST << std::endl;
 		return (NULL);
 	}
 	for (int i = 0; i < N; ++i)
 	{
 		horde[i]._name = name;
 	}
-	return horde;
+	return (horde);
 }
 
 
@@ -57,13 +56,14 @@ if so it prints an error msg malloc failure
 else it enters a loop and calls announce function for each object
 and at the end it frees the array of zombies to avoid memory leaks
 */
-void testZombieHorde(int N, std::string name)
+bool	testZombieHorde(int N, std::string name)
 {
 	Zombie	*horde = Zombie::zombieHorde(N, name);
-	if (horde == NULL)
+	if (!horde)
 	{
 		std::cerr << RED << MLC_FAIL << RST << std::endl;
-		return ;
+		delete[] horde;
+		return (false);
 	}
 	else
 	{
@@ -73,6 +73,7 @@ void testZombieHorde(int N, std::string name)
 		}
 		delete[] horde;
 	}
+	return (true);
 }
 
 //The destructor will clean up everything at the end

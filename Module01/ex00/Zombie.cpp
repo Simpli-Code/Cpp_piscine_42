@@ -6,18 +6,11 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 20:18:23 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/01 16:28:43 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/06 17:05:46 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-
-
-// Default Constructor
-Zombie::Zombie(void)
-{
-	return ;
-}
 
 /*
 defining the constructor for the Zombie class.

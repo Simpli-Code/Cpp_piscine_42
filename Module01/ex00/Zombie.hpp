@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 19:46:41 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/02 11:12:27 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/06 17:09:24 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ private:
 	std::string _name;
 
 public:
-	Zombie();
 	Zombie(std::string name);
 	void	announce(void);
 	~Zombie();

@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 18:41:14 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/02 20:35:11 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/06 17:11:47 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,6 @@ public:
 	~Zombie();
 };
 
-void testZombieHorde(int N, std::string name);
+bool	testZombieHorde(int N, std::string name);
 
 #endif
