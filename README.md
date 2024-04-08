@@ -12,7 +12,8 @@ Core!
 You will discover new concepts step-by-step. The exercises will progressively increase
 in complexity.
 
-Module 00
+Module 00 :
+
 Namespaces, classes, member functions, stdio streams,
 initialization lists, static, const, and some other basic
 stuff
