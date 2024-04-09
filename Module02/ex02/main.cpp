@@ -6,24 +6,40 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 18:30:28 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/06 21:57:12 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/08 15:14:07 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fixed.hpp"
+
+/*
+Ad-hoc polymorphism:
+refers to the ability of functions or operators to behave
+differently depending on the types of their arguments.
+This is achieved through function overloading and operator overloading.
+
+Function Overloading:
+In C++, you can define multiple functions with the same name but with different
+parameter lists. When you call a function, the compiler determines which version
+of the function to execute based on the number and types of arguments provided.
+
+Operator Overloading:
+In C++, you can redefine the behavior of operators for user-defined types.
+This allows you to use operators such as +, -, *, /, etc., with custom types.
+*/
 
 int main(void)
 {
 	Fixed		a;
 	Fixed const	b( Fixed( 5.05f ) * Fixed( 2 ) );
 
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
+	std::cout << PIN << a << std::endl;
+	std::cout << BLU << ++a << std::endl;
+	std::cout << RED << a << std::endl;
+	std::cout << CYN << a++ << std::endl;
+	std::cout << GRN << a << std::endl;
+	std::cout << PIN << b << std::endl;
+	std::cout << YEL << Fixed::max( a, b ) << RST << std::endl;
 	return (0);
 }
 

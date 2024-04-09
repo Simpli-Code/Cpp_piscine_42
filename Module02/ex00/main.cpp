@@ -6,11 +6,64 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 18:30:28 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/04 11:06:35 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/07 13:31:03 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fixed.hpp"
+
+/*
+Orthodox Canonical class:
+refers to a class that follows a set of conventions and guidelines for its design,
+
+including:
+Default Constructor: A constructor with no parameters that initializes the object
+to a default state.
+
+Copy Constructor:
+A constructor that initializes a new object as a copy of an existing object of
+the same type.
+
+Copy Assignment Operator:
+An overloaded assignment operator (operator=) that assigns the state of one
+object to another object of the same type.
+
+Destructor:
+A destructor that cleans up resources allocated by the object when it goes
+out of scope or is explicitly deleted.
+
+Getter and Setter Functions:
+Functions that allow accessing and modifying private member variables
+of the class, respectively.
+
+Operator Overloading:
+Overloading operators to provide custom behavior for the class,
+such as arithmetic operations, comparison operators,
+stream insertion (<<) and extraction (>>) operators, etc.
+
+Encapsulation:
+Proper encapsulation of data members by making them private and
+providing public interfaces to interact with them.
+
+Initialization Methods:
+Providing initialization methods for objects,
+which may be constructor overloads or separate member functions.
+
+Const-Correctness:
+Ensuring that member functions that do not modify the
+object's state are declared as const.
+
+Rule of Three (or Rule of Five):
+Implementing or disabling copy constructors, copy assignment operators,
+and destructors as needed to properly manage resources and prevent memory leaks.
+
+Static Member Functions:
+Functions that operate on class-level data or do not require an instance of the class.
+
+By adhering to these conventions, Orthodox Canonical classes are designed in a
+consistent and predictable manner, making them easier to understand,
+maintain, and integrate into larger codebases.
+*/
 
 int	main(void)
 {

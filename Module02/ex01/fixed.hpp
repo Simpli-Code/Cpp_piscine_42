@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 18:30:34 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/06 18:34:19 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/08 14:14:08 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ public:
 	Fixed &operator=(const Fixed &original);
 	float toFloat() const;
 	int toInt() const;
-
-	friend std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
 	~Fixed();
 };
+
+std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
 
 #endif
 

@@ -6,15 +6,14 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 18:37:10 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/03 14:44:32 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/07 16:54:01 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fixed.hpp"
 
-	Fixed::Fixed()
+	Fixed::Fixed() : _value(0)
 	{
-		_value = 0;
 		std::cout << RED << "Default constructor called" << RST << std::endl;
 	}
 

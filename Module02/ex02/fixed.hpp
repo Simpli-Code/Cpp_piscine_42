@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 18:30:34 by chruhin           #+#    #+#             */
-/*   Updated: 2024/04/07 11:55:59 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/04/08 14:24:04 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,10 +65,8 @@ public:
 	static const Fixed &min(const Fixed &a, const Fixed &b);
 	static Fixed &max(Fixed &a, Fixed &b);
 	static const Fixed &max(const Fixed &a, const Fixed &b);
-
-	int		getRawBits(void) const;
-	void	setRawBits(int const raw);
-	friend	std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
 };
+
+std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
 
 #endif
